@@ -49,7 +49,7 @@ export const productSchema: DocumentDefinition = {
       title: "title",
     },
   },
-  title: "Product Page",
+  title: "Product",
   type: "document",
   groups: [{
     default: true,

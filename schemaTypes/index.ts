@@ -1,7 +1,10 @@
 import {SchemaPluginOptions, Template} from 'sanity'
 import {productSchema} from './documents/product'
-import {postType} from './postType'
+import {postType} from './documents/postType'
 import { youtube } from './youtubeType';
+import { category } from './documents/category';
+import { websitePage } from './documents/website_page';
+import { templateSub } from './documents/template';
 
-export const schemaTypes = [postType, productSchema, youtube];
+export const schemaTypes = [websitePage, category, postType, productSchema, templateSub, youtube];
 export const templates = (templates: Template<string,string>[]) => templates.filter((template) => template.schemaType !== 'product');
