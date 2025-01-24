@@ -27,9 +27,18 @@ export const postType = defineType({
       type: 'image',
     }),
     defineField({
+      name: 'shortBody',
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
+    }),
+    defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'block'}, {type: 'youtube'}],
     }),
   ],
 })
