@@ -13,5 +13,18 @@ export const templateSub = defineType({
       name: 'slug',
       type: 'slug',
     }),
+    defineField({
+      name: 'metadata',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {name: 'key', type: 'string', title: 'Key', "validation" : (rule) => rule.required()  },
+            {name: 'value', type: 'string', title: 'Value'},
+          ],
+        },
+      ],
+    }),
   ],
 })

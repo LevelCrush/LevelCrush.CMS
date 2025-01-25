@@ -17,7 +17,7 @@ export const websitePage = defineType({
     }),
     defineField({
       name: "route",
-      type: "string"
+      type: "slug",
     }),
     defineField({
       name: 'hero',

@@ -3,7 +3,7 @@ import {productSchema} from './documents/product'
 import {postType} from './documents/postType'
 import { youtube } from './youtubeType';
 import { category } from './documents/category';
-import { websitePage } from './documents/website_page';
+import { websitePage } from './documents/page';
 import { templateSub } from './documents/template';
 
 export const schemaTypes = [websitePage, category, postType, productSchema, templateSub, youtube];
