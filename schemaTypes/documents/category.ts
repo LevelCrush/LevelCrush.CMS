@@ -11,38 +11,6 @@ export const category = defineType({
       validation: (rule) => rule.required()
     }),
     defineField({
-      name: 'route',
-      type: 'string',
-      initialValue: 'auto',
-      options: {
-        list: [
-          {
-            title: 'Auto',
-            value: 'auto',
-          },
-          {
-            title: 'Root',
-            value: 'root',
-          },
-          {
-            title: 'Nested',
-            value: 'nested',
-          },
-        ],
-      },
-      validation: (rule) => rule.required()
-    }),
-    defineField({
-      name: 'slug',
-      type: 'slug',
-      validation: (rule) => rule.required()
-    }),
-    defineField({
-      name: 'template',
-      type: 'reference',
-      to: [{type: 'template-sub'}],
-    }),
-    defineField({
       name: 'categories',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],

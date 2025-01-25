@@ -1,7 +1,7 @@
 import {defineField, defineType} from 'sanity'
 
 export const websitePage = defineType({
-  name: 'website-page',
+  name: 'page',
   title: 'Page',
   type: 'document',
   fields: [
@@ -16,10 +16,8 @@ export const websitePage = defineType({
       to: [{type: 'template-sub'}],
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
-      options: {source: 'title'},
-      validation: (rule) => rule.required(),
+      name: "route",
+      type: "string"
     }),
     defineField({
       name: 'hero',
@@ -29,12 +27,6 @@ export const websitePage = defineType({
       name: 'categories',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'category'}]}],
-    }),
-    defineField({
-      name: 'parentPage',
-      title: "Parent Page",
-      type: 'reference',
-      to: [{type: 'website-page'}],
     }),
     defineField({
       name: 'body',
