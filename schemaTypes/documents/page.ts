@@ -43,7 +43,10 @@ export const websitePage = defineType({
     defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}, {type: 'youtube'}],
+      of: [
+        {type: 'block'}, 
+        { type: 'image' },
+        {type: 'youtube'}],
     }),
   ],
 })
