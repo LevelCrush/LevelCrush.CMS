@@ -11,6 +11,18 @@ export const websitePage = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'tabName',
+      title: "Tab Name",
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+      defineField({
+      name: 'metaDescription',
+      title: "Meta Description",
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'template',
       type: 'reference',
       to: [{type: 'template-sub'}],
